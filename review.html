@@ -1,0 +1,24 @@
+<main class="main-content">
+				<div class="container">
+					<div class="page">
+						<div class="breadcrumbs">
+							<a href="index.html">Home</a>
+							<span>Movie Review</span>
+						</div>
+						<div class="movie-list">
+							<div style="width: 100%;" class="movie">
+								<figure class="movie-poster"><img src="{{movie.movieImage}}" alt="#"></figure>
+								<div class="movie-title">MOVIE: {{movie.movieName}}</div>
+								<div class="movie-summary cast">Cast: {{movie.movieCast}}</div>
+								<p class="review-listings"> REVIEW LISTINGS </p>
+								<ul class="review-head">
+								<li ng-repeat="review in reviews" class="review-sub">#{{$index+1}} {{review.review}}</li>
+								</ul>
+								<textarea ng-model="review" class="message uni-message" placeholder="Write a review...."></textarea>
+								<button class="view-review" ng-click="writeReview()">Submit Review</button>
+							</div>				
+						</div> <!-- .movie-list -->
+					</div>
+				</div> <!-- .container -->
+			</main>
+			
